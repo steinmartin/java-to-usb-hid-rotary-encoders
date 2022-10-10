@@ -57,6 +57,29 @@ public class EncoderIncrementReader implements HidServicesListener {
     public void readData() {
         System.out.println("Martin, the HID: " + this);
 
+        Byte[] data = null;
+        while (true) {
+            data = hidDevice.read(16,1000);
+            System.out.print("Martin, the HID data: " + data[0]);
+            System.out.print(" " + data[1]);
+            System.out.print(" " + data[2]);
+            System.out.print(" " + data[3]);
+            System.out.print(" " + data[4]);
+            System.out.print(" " + data[5]);
+            System.out.print(" " + data[6]);
+            System.out.print(" " + data[7]);
+            System.out.print(" " + data[8]);
+            System.out.print(" " + data[9]);
+            System.out.print(" " + data[10]);
+            System.out.print(" " + data[11]);
+            System.out.print(" " + data[12]);
+            System.out.print(" " + data[13]);
+            System.out.print(" " + data[14]);
+            System.out.println(" " + data[15]);
+
+
+        }
+
     }
 
     @Override
